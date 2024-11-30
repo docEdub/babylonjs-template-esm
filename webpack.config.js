@@ -19,10 +19,10 @@ module.exports = {
     },
     devServer: {
         host: "0.0.0.0",
-        port: 80,
+        port: 443,
         static: path.resolve(appDirectory, "public"),
         hot: false,
-        server: "http",
+        server: "https",
     },
     devtool: "inline-source-map",
     // infrastructureLogging: {

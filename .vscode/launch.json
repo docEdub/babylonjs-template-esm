@@ -5,15 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "http",
+            "name": "https",
             "request": "launch",
             "type": "chrome",
             "runtimeArgs": [
                 // "--auto-open-devtools-for-tabs",
-                // "-incognito",
-                "--test-type" // turns off security warnings
+                // Turns off https untrusted certificate warning
+                "--ignore-certificate-errors",
+                // Turns off security warning banner
+                "--test-type"
             ],
-            "url": "http://localhost",
+            "url": "https://localhost",
             "webRoot": "${workspaceFolder}/dist",
             "sourceMapPathOverrides": {
                 "webpack://*": "${workspaceFolder}/*"
